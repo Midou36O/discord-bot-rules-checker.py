@@ -18,6 +18,6 @@ async def on_message(msg): # msg is the message
               await msg.author.add_roles(discord.utils.get(msg.guild.roles, id=680422513121034310)) # add_roles is the call function for adding roles, of course, however we don't have any role object specified, so we make it on the fly by using this cool function that will search for something from a parameter of the wanted object. I recommend to use the ID because it never changes, however you can use name='name' too if you want. I think that other parameters such as 'color' work too, but I never tried, and the docs are shitty on explaining extra stuff
     await bot.process_commands(msg) # This is a call that you have to use because if on_message is called, bot will ignore every command unless you use this call that makes the bot check if the message was actually a command or not
 
-bot.run(TOKEN)
+bot.run('NzMwMTMyNzM2Mzk5OTAwNzAz.XwTDIA.L-OSjhi_HH2m4Y60xbFR6xCUlxs')
 
 
