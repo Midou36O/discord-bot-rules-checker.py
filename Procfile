@@ -1,1 +1,1 @@
-worker: python bot_test.py
+start: python3 bot_test.py
