@@ -11,7 +11,7 @@ bot.remove_command('help') # Here we disable the default help command
 async def on_message(msg): # msg is the message
     if msg.author == bot.user: # Here we make sure that the bot doesn't check his own messages
         return
-     else:
+    else:
         if msg.content.startswith('cactus'):
           if msg.content[7:].startswith('explodes'):
             if msg.content[16:].startswith('baloons'):
@@ -20,8 +20,8 @@ async def on_message(msg): # msg is the message
         if msg.channel.id == 730161129992618043:
             w=['!verify','hi','gay', 'owo', 'hewwo'] #actually this is like the blacklist words, put them if ppl says the same thing
             if msg.content.lower() in w or len(msg.split()) < 4 or len(msg.content) > 1000: #if the messages is lower than 4 words and higher than 1000, delete
-            await msg.delete ()
-            print('beep boop it worked')
+                await msg.delete()
+                print('beep boop it worked')
     await bot.process_commands(msg)
 bot.run('NzMwMTMyNzM2Mzk5OTAwNzAz.XwTDIA.L-OSjhi_HH2m4Y60xbFR6xCUlxs')
 
