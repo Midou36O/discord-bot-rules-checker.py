@@ -19,7 +19,7 @@ async def on_message(msg): # msg is the message
               await msg.delete()
         if msg.channel.id == 730161129992618043:
             w=['!verify','hi','gay', 'owo', 'hewwo'] #actually this is like the blacklist words, put them if ppl says the same thing
-            if msg.content.lower() in w or len(msg.split()) < 4 or len(msg.content) > 1000: #if the messages is lower than 4 words and higher than 1000, delete
+            if msg.content.lower() in w or len(msg.content.split()) < 4 or len(msg.content) > 1000: #if the messages is lower than 4 words and higher than 1000, delete
                 await msg.delete()
                 print('beep boop it worked')
     await bot.process_commands(msg)
