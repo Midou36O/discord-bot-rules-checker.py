@@ -21,9 +21,9 @@ async def on_message(msg): # msg is the message
             w=['!verify','hi','gay', 'owo', 'hewwo'] #actually this is like the blacklist words, put them if ppl says the same thing
             p=[365154614594502657, 649986611668451338, 550001691492089856, 306512687817555978, 421706224388800512, 471785433232179210, 209701282028453888, 213634643327582208, 600874061316489226, 257196097494188032, 333942090079797250, 436111437698433024, 602470901610446858, 708633835243569204,] # don't put the ' ' between the ID, put it as a normal number
             if msg.content.lower() in w or len(msg.split()) < 4 or len(msg.content) > 1000: #if the messages is lower than 4 words and higher than 1000, delete
-        if msg.author.id not in p:
-                await msg.delete()
-                print('beep boop it worked')
+                if msg.author.id not in p:
+                    await msg.delete()
+                    print('beep boop it worked')
     await bot.process_commands(msg)
 bot.run('NzMwMTMyNzM2Mzk5OTAwNzAz.XwTDIA.L-OSjhi_HH2m4Y60xbFR6xCUlxs')
 
