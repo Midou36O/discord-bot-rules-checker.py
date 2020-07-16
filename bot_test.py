@@ -12,9 +12,9 @@ async def on_message(msg): # msg is the message
     if msg.author == bot.user: # Here we make sure that the bot doesn't check his own messages
         return
     else:
-        if msg.content.startswith('cactuses'):
-          if msg.content[9:].startswith('explodes'):
-            if msg.content[18:].startswith('balloons'):
+        if msg.content.startswith('knowledge'):
+          if msg.content[10:].startswith('enhances'):
+            if msg.content[19:].startswith('power'):
               await msg.author.add_roles(discord.utils.get(msg.guild.roles, id=680422513121034310))
               await msg.delete()
         if msg.channel.id == 730161129992618043:
