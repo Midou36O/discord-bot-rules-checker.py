@@ -25,6 +25,6 @@ async def on_message(msg): # msg is the message
                     await msg.delete()
                     print('beep boop it worked')
     await bot.process_commands(msg)
-bot.run('NzMwMTMyNzM2Mzk5OTAwNzAz.XwTDIA.L-OSjhi_HH2m4Y60xbFR6xCUlxs')
+bot.run('NzU3OTY2NjkzODUwMDIxOTc5.X2oFfg.5OXUguZLAodkxVymnNfYIjjyhyM')
 
 
