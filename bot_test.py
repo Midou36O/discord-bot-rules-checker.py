@@ -26,5 +26,6 @@ async def on_message(msg): # msg is the message
                     print('beep boop it worked')
     await bot.process_commands(msg)
 bot.run('NzU3OTY2NjkzODUwMDIxOTc5.X2oFfg.5OXUguZLAodkxVymnNfYIjjyhyM')
+#a
 
 
