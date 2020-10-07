@@ -9,10 +9,10 @@ async def on_message(msg): # msg is the message
     if msg.author == bot.user: # Here we make sure that the bot doesn't check his own messages
         return
     else:
-        if msg.content.startswith('no'):
-          if msg.content[3:].startswith('brain'):
-            if msg.content[9:].startswith('no'):
-                if msg.content[12:].startswith('serv'):
+        if msg.content.startswith('experience'):
+          if msg.content[11:].startswith('creates'):
+            if msg.content[19:].startswith('insane'):
+                if msg.content[26:].startswith('differences'):
                     await msg.author.add_roles(discord.utils.get(msg.guild.roles, id=680422513121034310))
                     await msg.delete()
         if msg.channel.id == 730161129992618043:
