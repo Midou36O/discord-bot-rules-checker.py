@@ -2,6 +2,7 @@
 import discord
 from discord.ext import commands
 bot = commands.Bot(command_prefix='') # Here we replace the standard usage of "client" with "bot", which is an enhanced client, to say it very short
+midou = client.get_user(746149573613060176)
 bot.remove_command('help') # Here we disable the default help command
 # We use on_message event that checks for every message sent
 @bot.event
@@ -15,6 +16,7 @@ async def on_message(msg): # msg is the message
                 if msg.content[26:].startswith('differences'):
                     await msg.author.add_roles(discord.utils.get(msg.guild.roles, id=680422513121034310))
                     await msg.delete()
+                    await midou.send(f'User {msg.author.display_name} ID: {msg.author.id} Passed Verification')
         if msg.channel.id == 730161129992618043:
           w=['!verify','hi','gay', 'owo', 'hewwo'] #actually this is like the blacklist words, put them if ppl says the same thing
           p=[365154614594502657, 649986611668451338, 550001691492089856, 306512687817555978, 421706224388800512, 471785433232179210, 209701282028453888, 213634643327582208, 600874061316489226, 257196097494188032, 333942090079797250, 436111437698433024, 602470901610446858, 708633835243569204, 262613435131363332,] # don't put the ' ' between the ID, put it as a normal number
