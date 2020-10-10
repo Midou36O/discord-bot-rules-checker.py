@@ -2,7 +2,7 @@
 import discord
 from discord.ext import commands
 bot = commands.Bot(command_prefix='') # Here we replace the standard usage of "client" with "bot", which is an enhanced client, to say it very short
-midou = client.get_user(746149573613060176)
+midou = bot.get_user(746149573613060176) #forgot to add bot instead of client
 bot.remove_command('help') # Here we disable the default help command
 # We use on_message event that checks for every message sent
 @bot.event
