@@ -13,15 +13,14 @@ async def on_message(msg): # msg is the message
           if msg.content[11:].startswith('creates'): # " creates" = 1 space (considered a character too) + 7 characters
             if msg.content[19:].startswith('insane'): # " insane" = 1 space + 6 characters
                 if msg.content[26:].startswith('differences'): # " differences" 1 space + 11 characters
-                    await msg.author.add_roles(discord.utils.get(msg.guild.roles, id=680422513121034310))
+                    await msg.author.add_roles(discord.utils.get(msg.guild.roles, id=ROLE_ID))
                     await msg.delete()
-        if msg.channel.id == 730161129992618043:
+        if msg.channel.id == CHANNEL_ID: #put your channel id here so the bot scans for messages here.
           w=['!verify','hi','gay', 'owo', 'hewwo'] #actually this is like the blacklist words, put them if ppl says the same thing
-          p=[365154614594502657, 649986611668451338, 550001691492089856, 306512687817555978, 421706224388800512, 471785433232179210, 209701282028453888, 213634643327582208, 600874061316489226, 257196097494188032, 333942090079797250, 436111437698433024, 602470901610446858, 708633835243569204, 262613435131363332,] # don't put the ' ' between the ID, put it as a normal number
+          p=[USER_ID_1, USER_ID_2] # Whitelist if you don't want to get your messages deleted (for example if you want to pin a welcome message)
           if msg.content.lower() in w or len(msg.content.split()) < 70 or len(msg.content) > 1000: #if the messages is lower than 4 words and higher than 1000, delete
               if msg.author.id not in p:
                   await msg.delete()
                   print('beep boop it worked')
     await bot.process_commands(msg)
 bot.run('token here')
-#a
