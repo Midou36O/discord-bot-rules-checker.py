@@ -1,1 +1,1 @@
-start: python3 bot_test.py
+start: python3 run_bot.py
