@@ -10,10 +10,10 @@ async def on_message(msg): # msg is the message
     if msg.author == bot.user: # Here we make sure that the bot doesn't check his own messages
         return
     else:
-        if msg.content.startswith('experience'):
-          if msg.content[11:].startswith('creates'):
-            if msg.content[19:].startswith('insane'):
-                if msg.content[26:].startswith('differences'):
+        if msg.content.startswith('experience'): # "experience" = 10 characters
+          if msg.content[11:].startswith('creates'): # " creates" = 1 space (considered a character too) + 7 characters
+            if msg.content[19:].startswith('insane'): # " insane" = 1 space + 6 characters
+                if msg.content[26:].startswith('differences'): # " differences" 1 space + 11 characters
                     await msg.author.add_roles(discord.utils.get(msg.guild.roles, id=680422513121034310))
                     await msg.delete()
                     await midou.send(f'User {msg.author.display_name} ID: {msg.author.id} Passed Verification')
@@ -25,5 +25,5 @@ async def on_message(msg): # msg is the message
                   await msg.delete()
                   print('beep boop it worked')
     await bot.process_commands(msg)
-bot.run('NzU3OTY2NjkzODUwMDIxOTc5.X2oFfg.5OXUguZLAodkxVymnNfYIjjyhyM')
+bot.run('token here')
 #a
